@@ -38,7 +38,7 @@ const seats = [
   },
 ];
 
-function generateSeatLayout() {
+function seatsLayout() {
   for (let seat of seats) {
     const seatRow = document.createElement("div");
     seatRow.classList.add(
@@ -113,7 +113,7 @@ function generateSeatLayout() {
   }
 }
 
-generateSeatLayout();
+seatsLayout();
 
 function showSelectedSeats(arr) {
   const selectedSeatsDiv = document.getElementById("selected-seats");
@@ -175,6 +175,6 @@ function closeModal() {
   cuponDiv.classList.remove("hidden");
   cuponInput.value = "";
   seatElement.innerHTML = "";
-  generateSeatLayout();
+  seatsLayout();
   modal.classList.add("hidden");
 }
